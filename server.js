@@ -7,7 +7,7 @@ import express from 'express'
 const app = express()
 
 // 3. Configure the app (app.set)
-
+app.set('view engine', 'ejs')
 
 
 // 4. Mount Middleware (app.use)
@@ -16,12 +16,12 @@ const app = express()
 
 // 5. Mount routes
 app.get('/', function(req, res) {
-  res.send('<h1>hello, kfriend</h1>')
+  res.send('<h1>hello, friend</h1>')
 })
 // The first argument provided to app.get, /, defines the path for the route. In this case, the root of the application (the root of the application is just the hostname like localhost:3000)
 
 app.get('/home', function (req, res) {
-  res.send('<h1>home page</h1>')
+  res.render('home')
 })
 
 
