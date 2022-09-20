@@ -7,6 +7,15 @@
   <title>Intro To Express Lab</title>
 </head>
 <body>
-  <h1> Home Page </h1>
+  <h1>Students</h1>
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+				<%= student.name %> 
+				- 
+				<%= student.cool ? 'cool' : 'not cool' %>
+			</li>
+    <% }) %>
+  </ul>
 </body>
 </html>
